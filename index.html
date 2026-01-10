@@ -9,9 +9,9 @@
 :root {
   --bg: #0a0a0a;
   --card: #111;
-  --text: #ffffff;
+  --text: #fff;
   --muted: #777;
-  --hover-glow: #ffffff;
+  --hover-glow: #fff;
 }
 
 * { margin:0; padding:0; box-sizing:border-box; font-family:Inter,system-ui; }
@@ -20,7 +20,7 @@ body { background:var(--bg); color:var(--text); min-height:100vh; display:flex; 
 
 .container { text-align:center; max-width:420px; width:100%; padding:40px 20px; }
 
-.profile-pic { width:120px; height:120px; border-radius:50%; margin-bottom:20px; object-fit:cover; }
+.profile-pic { width:120px; height:120px; border-radius:50%; margin-bottom:20px; object-fit:cover; image-rendering:auto; }
 
 h1 { font-size:2.5rem; font-weight:600; text-transform:lowercase; }
 
@@ -28,26 +28,28 @@ h1 { font-size:2.5rem; font-weight:600; text-transform:lowercase; }
 
 .links { margin-top:40px; display:flex; flex-direction:column; gap:12px; }
 
-a { background:var(--card); border:1px solid #222; border-radius:12px; padding:14px; color:var(--text); text-decoration:none; transition:0.3s; }
+a, .nav a { background:var(--card); border:1px solid #222; border-radius:12px; padding:14px; color:var(--text); text-decoration:none; transition:0.3s; }
 
-/* Hover: smooth white glow */
-a:hover { box-shadow: 0 0 12px var(--hover-glow); transform: translateY(-2px); }
+a:hover, .nav a:hover { box-shadow:0 0 12px var(--hover-glow); transform:translateY(-2px); }
+
+.nav { display:flex; gap:20px; justify-content:center; margin-bottom:30px; }
 
 .footer { margin-top:40px; color:var(--muted); font-size:0.8rem; transition:0.3s; }
 </style>
 </head>
 <body>
-  <div class="container">
-    <img src="pfp.jpg" alt="perseus profile" class="profile-pic">
-    <h1>perseus</h1>
-    <div class="tagline">developer & creator</div>
+<div class="container">
+  <img src="pfp.jpg" alt="perseus profile" class="profile-pic">
+  <h1>perseus</h1>
+  <div class="tagline">developer & creator</div>
 
-    <div class="links">
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <div class="footer">© 2026 perseus</div>
+  <div class="links">
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="pricing.html">Pricing</a>
   </div>
+
+  <div class="footer">© 2026 perseus</div>
+</div>
 </body>
 </html>
