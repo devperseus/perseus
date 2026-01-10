@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Perseus</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>perseus</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -11,86 +11,42 @@
   --card: #111;
   --text: #ffffff;
   --muted: #777;
+  --accent: #1f6feb;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: Inter, system-ui;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Inter, system-ui; }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+body { background: var(--bg); color: var(--text); min-height: 100vh; display: flex; align-items: center; justify-content: center; }
 
-.container {
-  width: 100%;
-  max-width: 420px;
-  text-align: center;
-  padding: 40px 20px;
-}
+.container { text-align: center; max-width: 420px; width: 100%; padding: 40px 20px; }
 
-h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-}
+.profile-pic { width: 120px; height: 120px; border-radius: 50%; border: 2px solid var(--accent); margin-bottom: 20px; }
 
-.tagline {
-  color: var(--muted);
-  margin-top: 10px;
-  font-size: 1rem;
-}
+h1 { font-size: 2.5rem; font-weight: 600; text-transform: lowercase; }
 
-.links {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+.tagline { color: var(--muted); margin-top: 8px; font-size: 1rem; }
 
-a {
-  background: var(--card);
-  border: 1px solid #222;
-  border-radius: 12px;
-  padding: 14px;
-  color: var(--text);
-  text-decoration: none;
-  transition: 0.2s;
-}
+.links { margin-top: 40px; display: flex; flex-direction: column; gap: 12px; }
 
-a:hover {
-  border-color: #444;
-  transform: translateY(-2px);
-}
+a { background: var(--card); border: 1px solid #222; border-radius: 12px; padding: 14px; color: var(--text); text-decoration: none; transition: 0.2s; }
+a:hover { border-color: var(--accent); transform: translateY(-2px); }
 
-.footer {
-  margin-top: 40px;
-  color: var(--muted);
-  font-size: 0.8rem;
-}
+.footer { margin-top: 40px; color: var(--muted); font-size: 0.8rem; }
+
 </style>
 </head>
-
 <body>
   <div class="container">
-    <h1>Perseus</h1>
-    <div class="tagline">developer / creator</div>
+    <img src="pfp.png" alt="perseus profile" class="profile-pic">
+    <h1>perseus</h1>
+    <div class="tagline">developer & creator</div>
 
     <div class="links">
-      <a href="#">Projects</a>
-      <a href="#">GitHub</a>
-      <a href="#">Discord</a>
-      <a href="mailto:perseus@proton.me">Contact</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
     </div>
 
-    <div class="footer">
-      © 2026 Perseus
-    </div>
+    <div class="footer">© 2026 perseus</div>
   </div>
 </body>
 </html>
