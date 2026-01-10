@@ -59,20 +59,21 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* Smooth slide + fade dropdown */
+/* Smooth slide + fade dropdown with collapse on hover out */
 .project-details {
-  opacity: 0;
-  transform: translateY(10px);
+  max-height: 0;                  /* collapsed by default */
+  opacity: 0;                     /* invisible */
+  transform: translateY(10px);    /* slightly pushed down */
   overflow: hidden;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  padding: 0 16px;
+  transition: max-height 0.5s ease, transform 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+  padding: 0 16px;                /* horizontal padding */
 }
 
-/* When hovered, slide up and fade in */
 .project:hover .project-details {
-  opacity: 1;
-  transform: translateY(0);
-  padding: 10px 16px 20px 16px;
+  max-height: 800px;              /* enough space for images + button */
+  opacity: 1;                     /* fade in */
+  transform: translateY(0);       /* slide into place */
+  padding: 10px 16px 20px 16px;   /* top + horizontal + bottom */
 }
 
 /* Description spacing */
@@ -80,7 +81,7 @@ h1 {
   margin-bottom: 12px;
 }
 
-/* Project images inside dropdown */
+/* Project images spacing */
 .project-images img {
   width: 100%;
   border-radius: 8px;
